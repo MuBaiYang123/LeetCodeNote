@@ -1,13 +1,12 @@
 # 题目
-## 英文
-Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-## 题目大意
+## 题目
 在数组中找到 2 个数之和等于给定值的数字，结果返回 2 个数字在数组中的下标。
 
-# 示例
+## 难易程度
+简单--easy!
+
+## 示例
 ```
 Given nums = [2, 7, 11, 15], target = 9,
 
