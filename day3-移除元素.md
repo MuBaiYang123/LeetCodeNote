@@ -21,6 +21,7 @@ nums = [3,2,2,3], val = 3 ，输出数组长度应该为2，因为移除了两�
 
 
 ## 五、代码实现
+### 1. 0ms 18.8M
 ```
 class Solution {
 
@@ -43,4 +44,44 @@ class Solution {
         return $numsLength;
     }
 }
+```
+### 2. 0ms  18.9M
+```
+function removeElement(&$nums, $val) {
+    $left = 0;
+    $right = count($nums) -1;
+    $count = count($nums);
+
+    while($left <= $right){
+        if($nums[$left] == $val){
+            unset($nums[$left]);
+            $count--;
+        }
+        if(isset($nums[$right]) && $nums[$right] == $val){
+            unset($nums[$right]);
+            $count--;
+        }
+        $left++;
+        $right--;
+    }
+    return $count;
+}
+```
+
+### 3. 12ms 18.8M
+```
+function removeElement(&$nums, $val) {
+       $numsLen = count($nums);
+       if($numsLen <1){
+           return $numsLen;
+       }
+       $j = 0;
+       for($i=0;$i<$numsLen;$i++){
+           if($nums[$i] !=$val){
+               $nums[$j] = $nums[$i];
+               $j++;
+           }
+       }
+       return $j;
+    }
 ```
